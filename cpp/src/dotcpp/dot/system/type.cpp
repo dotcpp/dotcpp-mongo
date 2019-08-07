@@ -32,7 +32,7 @@ limitations under the License.
 
 namespace dot
 {
-    /// <summary>Built type_t from the current object.</summary>
+    /// Built type_t from the current object.
     type_t type_builder_impl::build()
     {
         type_->fill(this);
@@ -57,9 +57,7 @@ namespace dot
         return type_;
     }
 
-    /// <summary>
     /// Fill data from builder.
-    /// </summary>
     void type_impl::fill(const type_builder& data)
     {
         if (!data->base_.is_empty() && !data->base_->get_methods().is_empty() && data->base_->get_methods()->count())
@@ -70,19 +68,19 @@ namespace dot
             }
 
             list<method_info> base_methods = data->base_->get_methods();
-            list<method_info> new_methods = make_list<method_info>();
+            list<method_info> make_methods = make_list<method_info>();
             for (method_info meth_info_data : base_methods)
             {
 
-                new_methods->add(meth_info_data);
+                make_methods->add(meth_info_data);
             }
 
             for (method_info meth_info_data : data->methods_)
             {
-                new_methods->add(meth_info_data);
+                make_methods->add(meth_info_data);
             }
 
-            data->methods_ = new_methods;
+            data->methods_ = make_methods;
         }
 
         if (!data->methods_.is_empty())
@@ -117,19 +115,19 @@ namespace dot
             }
 
             list<field_info> base_fields = data->base_->get_fields();
-            list<field_info> new_fields = make_list<field_info>();
+            list<field_info> make_fields = make_list<field_info>();
             for (field_info field_info_data : base_fields)
             {
 
-                new_fields->add(field_info_data);
+                make_fields->add(field_info_data);
             }
 
             for (field_info field_info_data : data->fields_)
             {
-                new_fields->add(field_info_data);
+                make_fields->add(field_info_data);
             }
 
-            data->fields_ = new_fields;
+            data->fields_ = make_fields;
         }
 
         if (!data->fields_.is_empty())
@@ -173,11 +171,9 @@ namespace dot
         this->is_enum = data->is_enum_;
     }
 
-    /// <summary>
     /// Create from builder.
     ///
     /// This constructor is private. Use type_builder->build() method instead.
-    /// </summary>
     type_impl::type_impl(string nspace, string name)
     {
         this->name_space = nspace;

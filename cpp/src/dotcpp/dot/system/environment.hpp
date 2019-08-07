@@ -29,9 +29,7 @@ limitations under the License.
 
 namespace dot
 {
-    /// <summary>
     /// Provides information about, and means to manipulate, the current environment and platform.
-    /// </summary>
     class DOT_CLASS environment final
     {
     private: // CONSTRUCTORS
@@ -42,9 +40,7 @@ namespace dot
 
     public: // STATIC
 
-        /// <summary>
         /// Gets the newline string defined for this environment.
-        /// </summary>
-        static string new_line;
+        static string make_line;
     };
 }
