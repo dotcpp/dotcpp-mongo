@@ -1,6 +1,14 @@
-# DotCpp
+# DotCpp Mongo
 
-DotCpp project is a partial port of popular .NET libraries including the .NET Standard Library, NodaTime, and others to native C++17. Its purpose is to facilitate code reuse between C# and C++.
+DotCpp Mongo package is the port of .NET MongoDB driver to native C++17 using [DotCpp Core](https://github.com/compatibl/dotcpp "DotCpp Core"). The ported functionality includes MongoClient, MongoCollection, and related classes, as well as a partial implementation of IQueryable.
+
+The distinct features of the .NET MongoDB driver including object-document mapping (ODM) and LINQ-like queries are supported using reflection functionality provided by DotCpp.
+
+This package is currently in development.
+
+# DotCpp Core
+
+DotCpp core is a partial port of popular .NET libraries including the .NET Standard Library, NodaTime, and others to native C++17. Its purpose is to facilitate code reuse between C# and C++.
 
 DotCpp is developed and maintained by [CompatibL](http://www.compatibl.com "CompatibL"), a provider of custom software development services, market and credit risk solutions, and model validation consultancy for the financial industry.
 
